@@ -1,15 +1,16 @@
 # Welcome to My Web Portfolio
 
-1. AoE Random Picker: #> [Link](AoE2 Civ Picker/Aoe2_Rando_Civ.html)
+###
+* Just 3D Mods: > [Link](www.just3dmods.com)
+   > This is my website for my small 3d printing business. I made it from scratch.
+   > I sell a few toys/modifications for pinball machines.
+* AoE Random Picker: > [Link](AoE2 Civ Picker/Aoe2_Rando_Civ.html)
    > This was a small tool to help a friend pick a random civilization to play as
    > in the game Age of Empires 2, since the game lacked the feature to 'random' from a list of civs.
-1. Landmass Map Generator: #> [Link](Mapgen/index.html)
+* Landmass Map Generator: > [Link](Mapgen/index.html)
    > This page isn't so pretty, nor flashy, but it was a programming project to procedurally create
    > different 'world maps'.
-1. Item 2
-1. Item 3
-   1. Item 3a
-   1. Item 3b
+* Item 2
 
 
 You can use the [editor on GitHub](https://github.com/Trevord9898/ElectricPanda/edit/master/README.md) to maintain and preview the content for your website in Markdown files.

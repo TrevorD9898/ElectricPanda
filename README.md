@@ -1,6 +1,6 @@
 # Welcome to My Web Portfolio
 
-* [Just 3D Mods:](www.just3dmods.com)
+* ## Just 3D Mods: [www.just3dmods.com](www.just3dmods.com)
    > This is my website for my small 3d printing business. I made it from scratch.
    > I sell a few toys/modifications for pinball machines.
 * [AoE Random Picker:](AoE2 Civ Picker/Aoe2_Rando_Civ.html)

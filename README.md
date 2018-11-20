@@ -1,8 +1,9 @@
 # Welcome to My Web Portfolio
 
 1. AoE Random Picker:
-   > We're living the future so
-   > the present is our past.
+   > This was a small tool to help a friend pick a random civilization to play as
+   > in the game Age of Empires 2, since the game lacked the feature to 'random' from a list of civs.
+   [Link](url)
 1. Item 2
 1. Item 3
    1. Item 3a

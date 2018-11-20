@@ -1,9 +1,9 @@
 # Welcome to My Web Portfolio
 
-1. AoE Random Picker: **[Link](AoE2 Civ Picker/Aoe2_Rando_Civ.html)
+1. AoE Random Picker: #> [Link](AoE2 Civ Picker/Aoe2_Rando_Civ.html)
    > This was a small tool to help a friend pick a random civilization to play as
    > in the game Age of Empires 2, since the game lacked the feature to 'random' from a list of civs.
-1. Landmass Map Generator: **[Link](Mapgen/index.html)
+1. Landmass Map Generator: #> [Link](Mapgen/index.html)
    > This page isn't so pretty, nor flashy, but it was a programming project to procedurally create
    > different 'world maps'.
 1. Item 2

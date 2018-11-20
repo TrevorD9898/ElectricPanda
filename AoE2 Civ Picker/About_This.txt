@@ -1,0 +1,4 @@
+This is a tool for the classic RTS game, Age of Empires 2.
+It is pretty rudimentry, but shows off basic HTML/CSS/JS skills.
+It allows you to pick any civilization in the game from a list
+you'd want to play and gives you a random one from the ones you picked.

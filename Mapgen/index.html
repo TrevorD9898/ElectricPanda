@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<title>Map Generation</title>
+		<!-- "Includes" go here, like styles, javascript... -->
+		
+		<style>
+			.flex_box {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		</style>
+	</head>
+	
+	<body onload="Game.init()">
+		<h3>Map Generation</h3>
+		<section class = "flex_box">
+			<div id = "canvas_div">
+				<canvas id="game_canvas" width="512" height="512">
+					Your browser doesn't support HTML5 Canvas.</br>
+					Try Google Chrome or Mozilla Firefox for a better
+					browser experience today.
+				</canvas>
+			</div>
+			
+			<div>
+				<button onclick='Game.init()'>New Map</button>
+			</div>
+			
+			<div id='form' style='display: none;'>
+				<button onclick='Game.init()'>new</button>
+				<button onclick='Mapgen.gen_all()'>finish</button>
+				<button onclick='Mapgen.step_gen()'>step thru</button>
+				<button onclick='Mapgen.add_features()'>features</button>
+			</div>
+			
+			<div style='display: none;'>
+				Output:</br>
+				<div id="output"></div>
+			</div>
+		</section>
+		
+		<!-- dynamically load scripts inside body -->
+		<script>
+			// make and load script
+			var gamescript = document.createElement("script");
+			// append script to the page head
+			document.getElementsByTagName("head")[0].appendChild( gamescript );
+			// when JS loads...(out of order)
+			gamescript.onload = function()
+			{
+				// load game
+				//fighter_js.src = "js/fighter.js";
+				//document.getElementsByTagName("head")[0].appendChild( fighter_js );
+			}
+			// load JS, triggers code block above ----- ^
+			gamescript.src = "js/Map.js";
+		</script>
+	</body>
+</html>

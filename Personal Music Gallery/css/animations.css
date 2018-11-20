@@ -1,0 +1,7 @@
+@-webkit-keyframes slide_in {
+    100% { left: 0; }
+}
+
+@keyframes slide_in {
+    100% { left: 0; }
+}

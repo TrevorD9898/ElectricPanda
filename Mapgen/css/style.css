@@ -1,0 +1,33 @@
+*{
+	box-sizing: border-box;
+	padding: 0px;
+}
+
+canvas {
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+}
+
+.center {
+    margin: right;
+    width: 50%;
+    padding: 10px;
+}
+
+/* canvas 'hack'-- scale the canvas and its contents  */
+#game_canvas
+{
+	
+}
+
+#canvas_div {
+	width: 538px; height: 538px;
+	border: 2px solid yellow;
+	overflow: scroll;
+}
+#output {
+	width: 30%; height: 182px;
+	border: 2px solid red;
+	background: linear-gradient(to right,#F7D173,#FF8A7D); /* W3C */
+	overflow-y: scroll;
+}
+

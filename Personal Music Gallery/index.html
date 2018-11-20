@@ -1,0 +1,278 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Trevor Dunbar Music Gallery</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="manifest" href="site.webmanifest">
+	<!-- Place favicon.ico in the root directory -->
+	<link rel="apple-touch-icon" href="icon.png">
+	
+	<!-- external CSS -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+	<!-- fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<!-- font-family: 'Raleway', sans-serif; -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,900" rel="stylesheet">
+		<!-- font-family: 'Open Sans', sans-serif; -->
+	<link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya:400,500,700,800,900" rel="stylesheet"> 	
+	
+	<style>
+		.font01{
+			font-family: 'Alegreya', serif;
+			font-size: 1.23em;
+		}
+
+		.font02{
+			font-family: 'Orbitron', sans-serif;
+			font-size: 1.1em;
+		}
+		.font04{
+			font-family: 'Raleway', sans-serif;
+		}
+		.font05 {
+			font-family: 'Playfair Display', serif;
+		}
+	
+		html {
+			height: 100%;
+		}
+		body {
+			margin: 0;
+			height: 100%;
+			
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background: linear-gradient(to bottom, #e3b456 80%, #ffba39 100%);
+			background: linear-gradient(to bottom, #bf59d3 10%,#bf89d3 24%,#bf89d3 90%);
+			
+		}
+	
+		.flex {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		.avatar_wrap {
+			margin: 5px; margin-bottom: 0px;
+			width: 90px; height: 90px;
+			position: relative;
+		}
+		.avatar {
+			width: 100%; height: 100%;
+			display: block; position: absolute;
+			border-radius: 50%;
+		}
+		
+		#name {
+			display: inline-block;
+			font-family: 'Alegreya', serif;
+			color: white;
+			font-size: 2.6em;
+			font-weight: 600;
+			text-shadow: 1px 1px 1px #272727, 2px 2px 1px #272727;
+		}
+	
+		#title_wrap {
+			display: inline-block;
+		}
+		#title {
+			float: left;
+			position: relative;
+			left: -500px;
+			animation: slide_in 0.42s ease-in forwards;
+			animation-delay: 0.08s;
+		}
+		
+		.banner {
+			margin: 0px; margin-bottom: 5px;
+			padding: 8px;
+			font-size: 27px;  font-weight: 700;  text-shadow: 1px 1px 0px #DFDFDF;
+			background: linear-gradient(to bottom, #dba25d 0%,#f3ba6f 14%,#dba25d 100%);
+			background: linear-gradient(to bottom, #f1e767 0%,#feb645 100%);
+			background: linear-gradient(to bottom, #ffc743 0%, #eaa400 90%,#ffe6ab 100%);
+			box-shadow: inset 0px 0px 5px 2px #FDC86D, 0px 5px 7px rgba(24,24,24,0.45);
+		}
+
+		.year {
+			padding: 0px; 
+			border: ridge 3px purple;  border-sizing: border-box;  border-radius: 10px;
+			width: 50%; min-width: 304px;
+			font-size: 1.44em;
+			font-weight: 700;
+			text-align: center;
+			text-shadow: 1px 1px 0px #DFDFDF;
+			background: linear-gradient(to bottom, #ffc743 0%, #eaa400 90%, #ffe6ab 100%);
+			box-shadow: inset 0px 0px 0px 1px #da782D, inset 0px -7px 7px 2px #D38623, inset 2px 2px 12px 0px #FDFDFD;
+		}
+		
+		.music_track_wrapper {
+			animation: slide_in 0.42s ease-in forwards;
+			animation-delay: 0.1s;
+		}
+		.music_track_outer {
+			margin: 5px;
+			padding: 20px;  
+			border-radius:15px;
+			display: inline-block; 
+			width: 50%; min-width: 304px; 
+			background: purple;
+			background: linear-gradient(to bottom, #8e44ad 10%, #D03096 70%);
+			
+			float: left;
+			position: relative;
+			left: -100%;
+			animation: slide_in 0.42s ease-in-out forwards;
+			animation-delay: 5.0s;
+			
+			box-shadow: 2px 2px 2px 1px rgba(24,24,24,0.45);
+			
+			// 3d perspective
+			//transform-style: preserve-3d;
+			//transform: rotateX(15deg);
+		}
+		.music_track_inner {
+			display: inline-block; 
+			width: 100%;  min-width: 302px;			
+		}
+		.music_track_inner > p {
+			margin: 0px; padding: 5px;
+			border: 2px solid black;
+			box-sizing: border-box;
+			color: rgb(52,22,11); font-weight: 700; 
+			text-shadow: 1px 0px 1px #DDDDDD;
+			font-weight: 600;
+			background: linear-gradient(to bottom, #efd619 0%,#daa02c 20%,#daa02c 33%,#C49029 67%,#C49029 80%,#efd619 100%);
+			background: linear-gradient(to bottom, #ffe2a3 0%,#d69200 50%,#b47b00 51%,#ffbf35 100%);
+			box-shadow: inset 0px 0px 0px 1px #FD786D, inset 0px 0px 2px 2px #FDC86D, inset 0px 0px 7px 4px #FDC86D;
+		}
+		.music_track_inner > audio {
+			margin: 0px; padding: 0px;
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<!-- Add your site or application content here -->
+	<div id='title_wrap'>
+		<div id='title' class='flex'>
+			<div class='avatar_wrap'> <img class='avatar' src='img/lion_sigil.png'></img> </div>
+			<div id='name'>Trevor Dunbar</div>
+		</div>
+	</div>
+	
+	<div class='banner font01'>Original Music</div>
+	
+	<!-- year: 2018 -->
+	<div class='flex'>
+		<div class='year font05'>2018</div>
+	</div>
+	
+	<div class='music_track_wrapper flex'>
+		<div class='music_track_outer'>
+			<div class='music_track_inner'>
+				<p class='font02'>Future Attack (early vers)</p>
+				
+				<audio controls controlsList="nodownload">
+					<source src="music/futureAttack_preview.ogg" type="audio/ogg">
+				</audio>
+			</div>
+		</div>
+	</div>
+	
+	<div class='music_track_wrapper flex'>
+		<div class='music_track_outer'>
+			<div class='music_track_inner'>
+				<p class='font01'>More Dungeon Troubles (beta)</p>
+				
+				<audio controls controlsList="nodownload">
+					<source src="music/moreDungeonTroubles_preview.mp3" type="audio/mp3">
+				</audio>
+			</div>
+		</div>
+	</div>
+	
+	<div class='music_track_wrapper flex'>
+		<div class='music_track_outer'>
+			<div class='music_track_inner'>
+				<p class='font3'>Untitled track</p>
+				
+				<audio controls controlsList="nodownload">
+					<source src="" type="audio/mp3">
+				</audio>
+			</div>
+		</div>
+	</div>
+	
+	<div class='music_track_wrapper flex'>
+		<div class='music_track_outer'>
+			<div class='music_track_inner'>
+				<p class='font3'>Untitled track</p>
+				
+				<audio controls controlsList="nodownload">
+					<source src="" type="audio/mp3">
+				</audio>
+			</div>
+		</div>
+	</div>
+	
+	<div class='music_track_wrapper flex'>
+		<div class='music_track_outer'>
+			<div class='music_track_inner'>
+				<p class='font3'>Untitled track</p>
+				
+				<audio controls controlsList="nodownload">
+					<source src="" type="audio/mp3">
+				</audio>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+
+	<script>
+		// make tracks sweep in from the left, one-by-one
+		let tracks = document.getElementsByClassName("music_track_outer");
+		for (let i=0; i < tracks.length; ++i){
+			tracks[i].style.animationDelay = 0.19+(i*0.075) + "s";
+		}
+	
+		//-------Player-------
+		let audioP = {};
+		//--------------------
+		// player events
+		audioP.events = {};
+	
+		
+	</script>
+	
+	<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. 
+	<script>
+	window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+	ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+	</script>
+	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+	-->
+</body>
+
+</html>

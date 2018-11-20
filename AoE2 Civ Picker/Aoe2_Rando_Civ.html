@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>AoE2 Civ Picker</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!-- font: Source Code Pro -->
+	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400,700" rel="stylesheet"> 
+	<style>
+	body {
+		background-color: linen;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		background: url(https://i.imgur.com/IKLPCEf.jpg);
+		background-size:cover;
+	}
+	button {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 600;
+		line-height: 1;
+		margin-top: 1.5rem;
+		background-color: #ff4136;
+		color: #252525;
+		width: 10%;
+		font-size: 1.2em;
+		border: 2px solid red;
+		margin: 10px; padding: 10px;
+		background: url(https://i.imgur.com/IKLPCEf.jpg);
+		background-size:cover;
+	}
+	#avatar
+	{
+		display: inline-block;
+		width: 46px; height: 46px;
+		background: url(https://i.imgur.com/dEogWun.png);
+		background-size:cover;
+	}
+	#maker
+	{
+		font-size: 1.25em;
+		font-weight: 700;
+	}
+	#fields
+	{
+		font-size: 1.2em;
+	}
+	.flexCenter
+	{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.flexleft
+	{
+		display: flex;
+	}
+	#YouGot
+	{
+		width:100%;
+		font-size:1.75em;
+		font-weight: bold;
+	}
+	#civ
+	{
+		font-family: 'Open Sans', sans-serif;
+		background: #c0392b;
+		font-size: 3em;
+		box-shadow: 15px 15px 10px rgba(0, 0, 0, .3);
+	}
+	.reveal
+	{
+		animation: fadein 1s ease-in-out 1 normal;
+	}
+	@keyframes fadein
+	{
+		0% { 
+			opacity: 0;
+			-webkit-transform: scale(0.0);
+			transform: scale(0.0);
+		}
+		100%{
+			opacity: 1;
+			-webkit-transform: scale(10.0);
+			transform: scale(1.0);
+		}
+	}
+	</style>
+</head>
+
+<body id="home">
+	<div class='flexCenter'>
+		<h1>Age Of Empires 2 Rando Civilization Picker</h1>
+	</div>
+	<div class='flexCenter'>
+		<div></div>
+		<div id='avatar'></div>
+		<div id='maker'>by Trevor Dunbar</div>
+	</div>
+	
+	<div class='flexCenter'>
+		<div id='fields'></div>
+	</div>
+	
+	<div class='flexCenter'>
+		<button onclick='pickCiv();'>Pick My Civilization</button>
+	</div>		
+	
+	<div class='flexCenter'>
+		<div style='width: 100%; text-align: center;'>
+			<div id='YouGot'>
+				You got the:
+			</div>
+			<br>
+			<div id='civ' style='width: 100%; height: 50%;'>
+				<div id='picked_wrap'>
+					<span id='picked'>^ click button ^</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		// from Helpoful.js:
+		// random with new default values and added min/max args
+		function my_random (min,max) 
+		{
+			return Math.floor(Math.random() * (max - min)) + min;
+		}
+	
+		// list of civs, excluding turks, celts
+		var civs =
+		[
+		'Aztecs', 'Berbers', 'Britons', 'Burmese', 'Byzantines', 
+		'Celts', 'Chinese', 'Ethiopians', 'Franks', 'Goths',
+		'Huns', 'Incas', 'Indians', 'Italians',
+		'Japanese', 'Khmer', 'Koreans', 'Magyars', 'Malay',
+		'Malians', 'Mayans', 'Mongols', 'Persians', 'Portuguese',
+		'Saracens', 'Slavs', 'Spanish', 'Teutons', 'Turks', 'Vietnamese', 'Vikings'
+		];
+		// add fields
+		var fields = document.getElementById('fields');
+		var fieldset = document.createElement("fieldset");
+		{
+			let count = 0;
+			for (let i = 0; i < civs.length; ++i)
+			{
+				let input = document.createElement("input");
+				input.type ="checkbox";
+				input.name ="civ";
+				// disable celts and turks initally
+				if (i == 5 || i == 28)
+					input.checked = false;
+				else
+					input.checked = true;
+				input.name = civs[i];	
+				let text = document.createTextNode(civs[i]);
+				// append
+				fieldset.appendChild(input);
+				fieldset.appendChild(text);
+				count++;
+				if (count > 5)
+				{
+					count = 0;
+					let br = document.createElement("br");
+					fieldset.appendChild(br);
+				}
+			}
+			fields.appendChild(fieldset);
+		}
+		
+		function pickCiv()
+		{
+			// find eligable civs
+			let checkboxes = fieldset.childNodes;
+			let enalbedCivs = [];
+			for (let i=0; i<checkboxes.length; ++i)
+			{
+				if (checkboxes[i].checked)
+				{
+					enalbedCivs.push(checkboxes[i].name);
+				}
+			}
+			
+			// set animation and name
+			let rando = my_random(0, enalbedCivs.length);
+			let wrapper = document.getElementById('picked_wrap');
+			let picked = document.getElementById('picked');
+			if (wrapper.classList.contains('reveal')) wrapper.classList.remove('reveal');
+			setTimeout( 
+				function()
+				{ 
+					if (!wrapper.classList.contains('reveal')) wrapper.classList.add('reveal');
+					// set name
+					picked.innerHTML = enalbedCivs[rando];
+				},
+			100);
+		}
+	</script>
+</body>
+</html>
+

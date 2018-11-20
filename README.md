@@ -1,6 +1,5 @@
 # Welcome to My Web Portfolio
 
-###
 * Just 3D Mods: > [Link](www.just3dmods.com)
    > This is my website for my small 3d printing business. I made it from scratch.
    > I sell a few toys/modifications for pinball machines.
